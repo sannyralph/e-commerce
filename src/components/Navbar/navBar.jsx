@@ -6,7 +6,7 @@ import img from '../../assets/images/unnamed.png'
 
 
 
-const NavBar = () => {
+const NavBarz = () => {
 
    
     return (
@@ -46,5 +46,5 @@ const NavBar = () => {
       );
 }
 
-export default NavBar;
+export default NavBarz;
 
