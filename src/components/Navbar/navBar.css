@@ -1,7 +1,7 @@
 .navBar {
     background: fixed;
-    height: 100px;
-    background-color: rgb(255, 255, 255);
+    height: 80px;
+    background-color: #2d2d2d;
 }
 
 #navbtn {
@@ -16,3 +16,21 @@
 .navbarScroll{ 
     justify-content: flex-end;
 }
+
+.cat-text  {
+    border-bottom: none;
+    border-right: 1px  #fff;
+    box-sizing: border-box;
+    width: 70px;
+}
+
+#navbtn {
+    color: #fff;
+} 
+.Textfield {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 40px;
+    height: 15%;
+}
+
