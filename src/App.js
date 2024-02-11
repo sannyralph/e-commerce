@@ -1,5 +1,6 @@
 import './App.css';
 import NavBarz from './components/Navbar/navBar'
+import Footer from './components/Footer/footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
        <di>
           <NavBarz/>
+          <Footer/>
        </di>
        
     </div>
