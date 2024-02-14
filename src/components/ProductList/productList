@@ -1,0 +1,24 @@
+// ProductList.js
+// import { ClassNames } from '@emotion/react';
+// import React, { useEffect, useState } from 'react';
+// import { fetchProductsBySearchTerm } from '../../api';
+// import ProductCard from '../Cards/cards';
+
+// const ProductList = ({ searchTerm }) => {
+//   const [products, setProducts] = useState([]);
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const productsData = await fetchProductsBySearchTerm(searchTerm);
+//       setProducts(productsData || []); // Set productsData to an empty array if it's undefined or null
+//     };
+
+//     fetchData();
+//   }, [searchTerm]);
+
+//   return (
+//     <div ClassName='product-list'></div>
+//   );
+// };
+
+// export default ProductList;

@@ -6,10 +6,31 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import SearchIcon from "@mui/icons-material/Search";
 import { TextField, InputAdornment, Menu, MenuItem} from "@mui/material";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {getProductData} from "../../api"
+import Search from "@mui/icons-material/Search";
+
 
 const NavBarz = () => {
   const [anchor, setAnchor] = useState(null);
+  const [search, setSearch] = useState();
+  const [product, setProduct] = useState([]);
+
+  const fetchProductDate = async () => {
+      if (!search) {
+        return;
+      }
+
+      const data = await getProductData(Search);
+
+      setProduct(data)
+  };
+
+  // useEffect(() => {
+  //   fetchProductDate();
+  // },[search]);
+
+  console.log(product)
 
   const handleOpen = (event) => {
     setAnchor(event.currentTarget);
@@ -44,6 +65,8 @@ const NavBarz = () => {
 
         <Navbar.Collapse id="navbarScroll" className="navbarScroll">
           <TextField
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
             className="Textfield"
             placeholder="Search for items and brands"
             InputProps={{
