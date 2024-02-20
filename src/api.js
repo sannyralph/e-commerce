@@ -1,17 +1,15 @@
 
-
-
 const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': 'ece864edddmsh5dcae587fc1ab20p11d986jsn00085470bb28',
-		'X-RapidAPI-Host': 'asos10.p.rapidapi.com'
+		'X-RapidAPI-Host': 'asos-data-feed.p.rapidapi.com'
 	}
 };
 
-export const getProductData = async (productName) => {
-  const url = `https://asos10.p.rapidapi.com/api/v1/getProductListBySearchTerm?searchTerm=${productName}&currency=USD&country=US&store=US&languageShort=en&sizeSchema=US&limit=50&offset=0`;
-
+export const getItemData = async (searchItem) => {
+  const url = `https://asos-data-feed.p.rapidapi.com/search?q=${searchItem}&country=US&brand=nike`;
+  
   let result; 
 
   try {
@@ -24,4 +22,3 @@ export const getProductData = async (productName) => {
   
   return JSON.parse(result);
 }
-

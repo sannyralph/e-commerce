@@ -6,31 +6,31 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import SearchIcon from "@mui/icons-material/Search";
 import { TextField, InputAdornment, Menu, MenuItem} from "@mui/material";
-import { useState, useEffect } from "react";
-import {getProductData} from "../../api"
-import Search from "@mui/icons-material/Search";
+import { useState, useEffect} from "react";
+import {getItemData} from "../../api"
+import ProductCard from "./../Cards/cards"
 
 
 const NavBarz = () => {
   const [anchor, setAnchor] = useState(null);
   const [search, setSearch] = useState();
-  const [product, setProduct] = useState([]);
+  const [items, setItems] = useState([]);
 
-  const fetchProductDate = async () => {
-      if (!search) {
-        return;
-      }
+  const fetchItemData = async () => {
+    if(!search) {
+      return;
+    }
 
-      const data = await getProductData(Search);
+    const data = await getItemData(search); 
 
-      setProduct(data)
-  };
+    setItems(data.products);
+  }
 
-  // useEffect(() => {
-  //   fetchProductDate();
-  // },[search]);
+  useEffect(() => {
+      fetchItemData();
+  }, [search]);
 
-  console.log(product)
+  console.log(items)
 
   const handleOpen = (event) => {
     setAnchor(event.currentTarget);
@@ -120,6 +120,12 @@ const NavBarz = () => {
           <AddShoppingCartIcon />{" "}
         </Button>
       </Container>
+
+      {items?.map((item) => {
+          return(
+            <ProductCard  key={item.id} item={item}/>
+          )
+          })}
     </Navbar>
   );
 };
