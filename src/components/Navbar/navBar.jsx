@@ -6,9 +6,10 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import SearchIcon from "@mui/icons-material/Search";
 import { TextField, InputAdornment, Menu, MenuItem} from "@mui/material";
-import { useState, useEffect} from "react";
+import { useState, useEffect, Fragment} from "react";
 import {getItemData} from "../../api"
-import ProductCard from "./../Cards/cards"
+import ProductList from "./../ProductList/productList"
+
 
 
 const NavBarz = () => {
@@ -41,6 +42,7 @@ const NavBarz = () => {
   };
 
   return (
+    <Fragment>
     <Navbar expand="lg" className="navBar">
       <Container fluid>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -120,13 +122,9 @@ const NavBarz = () => {
           <AddShoppingCartIcon />{" "}
         </Button>
       </Container>
-
-      {items?.map((item) => {
-          return(
-            <ProductCard  key={item.id} item={item}/>
-          )
-          })}
     </Navbar>
+      <ProductList items={items}/>  
+  </Fragment>
   );
 };
 
