@@ -1,0 +1,46 @@
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+    gap: 20px; /* Margin between cards */
+    justify-content: space-between; /* Distribute cards evenly */
+  }
+  
+  .product-list .MuiCard-root {
+    flex: 1 0 calc(25% - 20px); /* Each card occupies 25% of the container width */
+    max-width: calc(25% - 20px); /* Maximum width for each card */
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .product-list .MuiCard-root {
+      flex: 1 0 calc(33.33% - 20px); /* 3 cards per row on smaller screens */
+      max-width: calc(33.33% - 20px);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .product-list .MuiCard-root {
+      flex: 1 0 calc(50% - 20px); /* 2 cards per row on even smaller screens */
+      max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .product-list .MuiCard-root {
+      flex: 1 0 calc(100% - 20px); /* 1 card per row on mobile screens */
+      max-width: calc(100% - 20px);
+    }
+  }
+  
+
+  .brand-name {
+        text-align: start;
+        font-family: "Protest Strike", sans-serif;
+        font-weight: 1000 !important;
+        font-style: normal ;
+        color: rgb(0, 0, 0);
+  }
+
+  .product-name {
+    text-align: start;
+  }
