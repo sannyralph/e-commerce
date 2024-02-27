@@ -11,8 +11,8 @@ const ProductCard = ({ item }) =>  {
   return (
     <Card sx={{ width: 320, maxWidth: '100%', boxShadow: 'lg' }}>
       <CardOverflow>
-        <AspectRatio sx={{ minWidth: 200 }}>
-          <img srcSet={item?.imageUrl}  />
+        <AspectRatio sx={{ minWidth: "100%" }}>
+          <img src={`https:${item?.imageUrl}`}  alt="item pics"  className='product-image'/>
         </AspectRatio>
       </CardOverflow>
       <CardContent>

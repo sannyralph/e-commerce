@@ -14,11 +14,13 @@ import ProductList from "./../ProductList/productList"
 
 const NavBarz = () => {
   const [anchor, setAnchor] = useState(null);
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState("");
   const [items, setItems] = useState([]);
 
   const fetchItemData = async () => {
     if(!search) {
+      const randomItems = [];
+          setItems(randomItems);
       return;
     }
 
@@ -48,7 +50,7 @@ const NavBarz = () => {
         <Navbar.Toggle aria-controls="navbarScroll" />
 
         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: "100px" }}>
-          <img src={img} width={150} />
+          <img src={img} width={150} alt={"sporton logo"} />
         </Nav>
         <Navbar.Collapse id="navbarScroll">
           <Nav
