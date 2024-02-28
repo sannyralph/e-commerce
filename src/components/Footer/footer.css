@@ -2,8 +2,12 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: #000000;
     padding: 20px 0;
+  }
+
+  .grid-content {
+      justify-content: center;
   }
 
 .footer-li {
@@ -14,9 +18,43 @@
 
 .footer-li a {
     text-decoration: none;
-    color: gray;
+    color: white;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+}
+
+.text-header {
+    color: white;
+    margin-bottom: 15px !important;
+    font-size: 25px !important;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif !important;
 }
 
 .footer-li a:hover {
-    color: #007aff;
+    color: #b0b3b6;
 }
+
+#socia-media-icons {
+    margin-top: 50px;
+}
+
+.footer-icons {
+    display: grid;
+}
+
+  #insta:hover {
+    color: tomato !important;
+  }
+  #whatsapp:hover {
+    color: green;
+  }
+  #youtube:hover {
+    color: red;
+  }
+  #x:hover {
+    color: rgb(97, 187, 223);
+  }
