@@ -50,11 +50,11 @@
     color: tomato !important;
   }
   #whatsapp:hover {
-    color: green;
+    color: green !important;
   }
   #youtube:hover {
-    color: red;
+    color: red !important;
   }
   #x:hover {
-    color: rgb(97, 187, 223);
+    color: rgb(45, 110, 180) !important;
   }
