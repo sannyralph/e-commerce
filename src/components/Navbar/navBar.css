@@ -19,10 +19,15 @@
 
 .cat-text  {
     border-bottom: none;
-    border-right: 1px  #fff;
+    border-right: 1px  rgb(255, 255, 255);
     box-sizing: border-box;
     width: 70px;
 }
+
+.cat-text:hover {
+    color: #b0b3b6 !important;
+}
+
 
 #navbtn {
     color: #fff;

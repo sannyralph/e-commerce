@@ -26,6 +26,10 @@
 
 }
 
+.footer-li a:hover {
+    color: #b0b3b6;
+}
+
 .text-header {
     color: white;
     margin-bottom: 15px !important;
@@ -34,9 +38,7 @@
     "Lucida Sans", Arial, sans-serif !important;
 }
 
-.footer-li a:hover {
-    color: #b0b3b6;
-}
+
 
 #socia-media-icons {
     margin-top: 50px;
