@@ -1,8 +1,27 @@
 
 
-.carousel {
+.carousel-background {
     background-size: cover; /* Cover the entire container with the background image */
     background-position: center; /* Center the background image horizontally and vertically */
     /* Add any other styles you need for the carousel container */
     height: 400px;
 }
+
+.carousel {
+    
+  }
+
+  .carousel .rec-item {
+    margin: 0; /* Remove any default margin */
+  }
+  
+  
+  .carousel .rec-item {
+    margin-left: 10px;
+    display: flex;
+    justify-content: start;
+    font-size: 35px; /* Reduce font size for paragraph */
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+  }

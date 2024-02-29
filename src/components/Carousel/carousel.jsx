@@ -7,12 +7,12 @@ import background from "./../../assets/images/gym3.webp"
 
 const  Slider = () => {
     return (
-        <div className="carousel" style={{backgroundImage: `url(${background})`}}>
-            <Carousel>
-               <Item> "The only bad workout is the one that didn't happen." </Item>
-               <Item> "Train like a beast, look like a beauty." </Item>
-               <Item> "The pain you feel today will be the strength you feel tomorrow." </Item>
-               <Item> "Train hard, stay humble." </Item>
+        <div className="carousel-background" style={{backgroundImage: `url(${background})`}}>
+            <Carousel className="carousel">
+               <Item className="rec-item"> "The only bad workout <br/>is the one that <br/>didn't happen." </Item>
+               <Item className="rec-item"> "Train like a beast, <br/>look like a beauty." </Item>
+               <Item className="rec-item"> "The pain you feel today <br/>will be the strength <br/>you feel tomorrow." </Item>
+               <Item className="rec-item"> "Train hard, <br/>stay humble." </Item>
             </Carousel>
         </div>
     );
