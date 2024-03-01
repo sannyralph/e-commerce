@@ -7,8 +7,19 @@
     height: 400px;
 }
 
-.carousel {
-    
+.button {
+    background-color: white !important;
+    color: black !important;
+    justify-content: center;
+    width: 200px;
+    border-radius: 20px !important; 
+    font-size: 15px !important; 
+    font-family: Helvetica, Arial, sans-serif !important; 
+    font-weight: 900 !important;
+  }
+
+  .button:hover {
+    background-color: #b0b3b6 !important;
   }
 
   .carousel .rec-item {
@@ -18,10 +29,10 @@
   
   .carousel .rec-item {
     margin-left: 10px;
-    display: flex;
+    display: grid;
     justify-content: start;
     font-size: 35px; /* Reduce font size for paragraph */
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 900;
-    color: rgb(0, 0, 0);
+    color: white;
   }

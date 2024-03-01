@@ -125,7 +125,7 @@ const NavBarz = () => {
         </Button>
       </Container>
     </Navbar>
-      <ProductList items={items}/>  
+      {/* <ProductList items={items}/>   */}
   </Fragment>
   );
 };
