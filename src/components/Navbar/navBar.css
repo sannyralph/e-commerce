@@ -39,3 +39,13 @@
     height: 15%;
 }
 
+.free-shipping {
+    background-color: #ffffff;
+}
+
+.free-shippingText {
+    justify-content: center;
+    color: black;
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: 800;
+}

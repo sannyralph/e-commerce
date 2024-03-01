@@ -4,6 +4,7 @@ import Footer from './components/Footer/footer'
 import ProductCard from "./components/Cards/cards"
 import Slider from "./components/Carousel/carousel"
 import 'bootstrap/dist/css/bootstrap.min.css'
+import FreeShiping from "./components/Navbar/freeShiping"
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
        <di>
           <NavBarz/>
+          <FreeShiping />
           <Slider />
           <ProductCard />
           <Footer/>
