@@ -11,20 +11,19 @@ const Help = () => {
           <div className="Help-item">
             <QuestionMarkIcon className="Help-icon"/>
             <h6>Need Help</h6>
-            <p>The most frequently asked questions about our products, payment methods, ordering and returns processes are answered in our Help Center.</p>
+            <p>The most frequently asked questions are answered in our Help Center.</p>
             <Button variant="contained" disableElevation className="button">Help Center</Button>
           </div>
           <div className="Help-item">
             <LocalShippingIcon  className="Help-icon" />
             <h6>Track Order</h6>
-            <p>What to know where you order is? </p>
+            <p>Want to know where your order is and when it will arrive? Track your order here. </p>
             <Button variant="contained" disableElevation className="button">Track Order</Button>
           </div>
           <div className="Help-item">
             <QuestionAnswerIcon  className="Help-icon" />
             <h6>Contact Us</h6>
             <p>Then write us a message and we will try to get back to you within a few days.</p>
-            <p>Current processing time: 3 business days</p>
             <Button variant="contained" disableElevation className="button">Contact Us</Button>
           </div>
         </div>
