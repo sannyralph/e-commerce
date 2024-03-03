@@ -28,11 +28,16 @@
   
   
   .carousel .rec-item {
-    margin-left: 10px;
-    display: grid;
-    justify-content: start;
-    font-size: 35px; /* Reduce font size for paragraph */
+    margin-left: 35px;
+    align-items: stretch;
+    justify-content: flex-start;
+    font-size: 15px; /* Reduce font size for paragraph */
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 900;
     color: white;
   }
+
+  .carousel .rec-item p {
+    text-align: justify;
+
+  } 

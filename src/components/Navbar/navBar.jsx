@@ -2,12 +2,14 @@ import { Navbar, Nav, Container, Button} from "react-bootstrap";
 import "./navBar.css";
 import img from "../../assets/images/unnamed.png";
 import PersonIcon from "@mui/icons-material/Person";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+// import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import SearchIcon from "@mui/icons-material/Search";
 import { TextField, InputAdornment, Menu, MenuItem} from "@mui/material";
 import { useState, useEffect, Fragment} from "react";
 import {getItemData} from "../../api"
+import SignInSide from "./../Signup/signup"
 import ProductList from "./../ProductList/productList"
 
 
@@ -92,7 +94,7 @@ const NavBarz = () => {
         >
           <PersonIcon />
         </Button>
-        <Menu
+        {/* <Menu
           id="account-manu"
           anchor={anchor}
           open={Boolean(anchor)}
@@ -114,14 +116,14 @@ const NavBarz = () => {
           <MenuItem onClick={handleClose}>My Order</MenuItem>
           <MenuItem onClick={handleClose}>My Returns</MenuItem>
           <MenuItem onClick={handleClose}>Help</MenuItem>
-        </Menu>
+        </Menu> */}
         <Button variant="outline" style={{ color: "white" }}>
           {" "}
           <FavoriteIcon />{" "}
         </Button>
         <Button variant="outline" style={{ color: "white" }}>
           {" "}
-          <AddShoppingCartIcon />{" "}
+          <ShoppingBagIcon />{" "}
         </Button>
       </Container>
     </Navbar>

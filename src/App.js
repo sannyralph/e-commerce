@@ -1,10 +1,11 @@
 import './App.css';
 import NavBarz from './components/Navbar/navBar'
 import Footer from './components/Footer/footer'
-import ProductCard from "./components/Cards/cards"
+// import ProductCard from "./components/Cards/cards"
 import Slider from "./components/Carousel/carousel"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import FreeShiping from "./components/Navbar/freeShiping"
+import Help from "./components/Product/help"
 
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
           <NavBarz/>
           <FreeShiping />
           <Slider />
-          <ProductCard />
+          <Help /> 
+          {/* <ProductCard /> */}
           <Footer/>
        </di>
        
