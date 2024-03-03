@@ -4,7 +4,7 @@ import Footer from './components/Footer/footer'
 // import ProductCard from "./components/Cards/cards"
 import Slider from "./components/Carousel/carousel"
 import 'bootstrap/dist/css/bootstrap.min.css'
-import FreeShiping from "./components/Navbar/freeShiping"
+import Promotions from "./components/Navbar/freeShiping"
 import Help from "./components/Product/help"
 
 
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
        <di>
           <NavBarz/>
-          <FreeShiping />
+          <Promotions />
           <Slider />
           <Help /> 
           {/* <ProductCard /> */}
