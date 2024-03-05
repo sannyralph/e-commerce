@@ -86,7 +86,7 @@ const NavBarz = () => {
             }}
           />
         </Navbar.Collapse>
-        <Link to="/login">
+        <Link to="/SignInSide">
           <Button 
               variant="outline" 
               style={{ color: "white" }}
