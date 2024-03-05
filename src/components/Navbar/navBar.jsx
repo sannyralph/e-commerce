@@ -1,4 +1,5 @@
 import { Navbar, Nav, Container, Button} from "react-bootstrap";
+import {Link} from 'react-router-dom'
 import "./navBar.css";
 import img from "../../assets/images/unnamed.png";
 import PersonIcon from "@mui/icons-material/Person";
@@ -6,11 +7,11 @@ import PersonIcon from "@mui/icons-material/Person";
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import SearchIcon from "@mui/icons-material/Search";
-import { TextField, InputAdornment, Menu, MenuItem} from "@mui/material";
+import { TextField, InputAdornment} from "@mui/material";
 import { useState, useEffect, Fragment} from "react";
 import {getItemData} from "../../api"
-import SignInSide from "./../Signup/signup"
-import ProductList from "./../ProductList/productList"
+// import SignInSide from "./../Signup/signup"
+// import ProductList from "./../ProductList/productList"
 
 
 
@@ -50,10 +51,11 @@ const NavBarz = () => {
     <Navbar expand="lg" className="navBar">
       <Container fluid>
         <Navbar.Toggle aria-controls="navbarScroll" />
-
+        <Link to="/">
         <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: "100px" }}>
           <img src={img} width={150} alt={"sporton logo"} />
-        </Nav>
+        </Nav>                
+        </Link>
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
@@ -84,47 +86,31 @@ const NavBarz = () => {
             }}
           />
         </Navbar.Collapse>
-        <Button 
-            variant="outline" 
-            style={{ color: "white" }}
-            aria-controls="account-manu"
-            aria-haspopup="true"
-            onMouseEnter={handleOpen}
-            onMouseLeave={handleClose}
-        >
-          <PersonIcon />
-        </Button>
-        {/* <Menu
-          id="account-manu"
-          anchor={anchor}
-          open={Boolean(anchor)}
-          onClose={handleClose}
-          onMouseEnter={handleOpen}
-          onMouseLeave={ () => anchor && handleClose}
-          anchorOrigin= {{
-            vertical: 'bottom',
-            horizontal: 'right',
-          }}
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          getContentAnchor={null}
-        >
-          <MenuItem onClick={handleClose}>Sign In</MenuItem>
-          <MenuItem onClick={handleClose}>Account</MenuItem>
-          <MenuItem onClick={handleClose}>My Order</MenuItem>
-          <MenuItem onClick={handleClose}>My Returns</MenuItem>
-          <MenuItem onClick={handleClose}>Help</MenuItem>
-        </Menu> */}
+        <Link to="/login">
+          <Button 
+              variant="outline" 
+              style={{ color: "white" }}
+              aria-controls="account-manu"
+              aria-haspopup="true"
+              onMouseEnter={handleOpen}
+              onMouseLeave={handleClose}
+          >
+            <PersonIcon />
+          </Button>
+        </Link>
+       
+       <Link to="/SavedItems">
         <Button variant="outline" style={{ color: "white" }}>
-          {" "}
-          <FavoriteIcon />{" "}
+            {" "}
+            <FavoriteIcon />{" "}
         </Button>
-        <Button variant="outline" style={{ color: "white" }}>
+       </Link>
+       <Link to="/cart">
+       <Button variant="outline" style={{ color: "white" }}>
           {" "}
           <ShoppingBagIcon />{" "}
-        </Button>
+        </Button> 
+       </Link>
       </Container>
     </Navbar>
       {/* <ProductList items={items}/>   */}
