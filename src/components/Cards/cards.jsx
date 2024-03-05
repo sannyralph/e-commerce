@@ -1,14 +1,57 @@
-import React from "react";
-import "./Cards.css"
+import React, { useState } from "react";
+import "./Cards.css";
+import imgTest1 from "./../../assets/images/test1.webp";
+import imgTest2 from "./../../assets/images/test2.webp";
+import imgTest3 from "./../../assets/images/test3.webp";
+import imgTest4 from "./../../assets/images/test4.webp";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 const ProductCard = ({ item }) => {
+  const [hovered, setHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+
   return (
-    <div className="product-card">
-      <img src={`https:${item?.imageUrl}`}  alt={item?.brandName} className="product-image" />
+    <div
+      className="product-card"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="product-image-container">
+        <img
+          src={imgTest2}
+          alt={"itemname"}
+          className="product-image"
+        />
+        {hovered && (
+          <img src={imgTest3} alt="Alternate Image" className="hover-image" />
+        )}
+        <div className="heart-icon">&#9825;</div>
+        {hovered && (
+          <div className="size-options">
+            <label>Select Size:</label>
+            <select>
+              <option value="XXS">XXS</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+          </div>
+        )}
+      </div>
       <div className="product-details">
-        <h2 className="product-name">{item?.brandName}</h2>
-        <p className="product-price">{item?.price.current.text}</p>
-        {/* You can add additional information here */}
+        <h2 className="product-name">{"Sport Bra"}</h2>
+        <p className="product-price">{"$45"}</p>
+        {/* Additional information here */}
       </div>
     </div>
   );
