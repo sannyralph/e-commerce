@@ -1,7 +1,7 @@
 import './App.css';
 import NavBarz from './components/Navbar/navBar'
 import Footer from './components/Footer/footer'
-// import ProductCard from "./components/Cards/cards"
+import ProductCard from "./components/Cards/cards"
 import Slider from "./components/Carousel/carousel"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Promotions from "./components/Navbar/freeShiping"
@@ -18,7 +18,7 @@ function App() {
           <Promotions />
           <Slider />
           <Help /> 
-          {/* <ProductCard /> */}
+          <ProductCard />
           <Footer/>
        </di>
        
