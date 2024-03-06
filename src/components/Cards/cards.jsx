@@ -4,7 +4,7 @@ import imgTest1 from "./../../assets/images/test1.webp";
 import imgTest2 from "./../../assets/images/test2.webp";
 import imgTest3 from "./../../assets/images/test3.webp";
 import imgTest4 from "./../../assets/images/test4.webp";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 const ProductCard = ({ item }) => {
   const [hovered, setHovered] = useState(false);
@@ -18,11 +18,9 @@ const ProductCard = ({ item }) => {
   };
 
   return (
-    <div
-      className="product-card"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+
+    <div>
+       <div className="product-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="product-image-container">
         <img
           src={imgTest2}
@@ -32,7 +30,7 @@ const ProductCard = ({ item }) => {
         {hovered && (
           <img src={imgTest3} alt="Alternate Image" className="hover-image" />
         )}
-        <div className="heart-icon">&#9825;</div>
+        <div className="heart-icon"><FavoriteBorderIcon /></div>
         {hovered && (
           <div className="size-options">
             <label>Select Size:</label>
@@ -53,6 +51,7 @@ const ProductCard = ({ item }) => {
         <p className="product-price">{"$45"}</p>
         {/* Additional information here */}
       </div>
+    </div>
     </div>
   );
 };

@@ -38,12 +38,13 @@
   top: 10px;
   left: 10px;
   z-index: 1;
-  color: #ff5757;
+  color: #000000;
   cursor: pointer;
 }
 
 .product-details {
   padding: 15px;
+  
 }
 
 .product-name {
