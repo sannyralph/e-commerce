@@ -45,14 +45,15 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 25px;
-    background-color: #acacac;
+    height: 35px;
+    background-color: #e5e7eb;
   }
   
   .slider {
     display: flex;
     justify-content: center;
-    color: rgb(255, 255, 255);
+    align-content: center;
+    color: rgb(0, 0, 0);
     font-family: Helvetica, Arial, sans-serif;
     font-size: small;
   }

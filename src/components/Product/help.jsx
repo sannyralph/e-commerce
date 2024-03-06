@@ -7,8 +7,12 @@ import Button from '@mui/material/Button';
 
 const Help = () => {
     return (
+      <div className="HelpCenter-container">
+        <div>
+          <h1 className="HelpCenter-header">Help Center</h1>
+        </div>
         <div className="Help">
-          <div className="Help-item">
+           <div className="Help-item">
             <QuestionMarkIcon className="Help-icon"/>
             <h6>Need Help</h6>
             <p>The most frequently asked questions are answered in our Help Center.</p>
@@ -27,6 +31,7 @@ const Help = () => {
             <Button variant="contained" disableElevation className="button">Contact Us</Button>
           </div>
         </div>
+      </div>
     );
 }; 
 

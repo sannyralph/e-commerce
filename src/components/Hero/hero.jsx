@@ -7,8 +7,8 @@ const Hero = () => {
     return (
         <div>
             <Slider />
-            <Help /> 
             <ProductCard />
+            <Help /> 
         </div>
     );
 } ;

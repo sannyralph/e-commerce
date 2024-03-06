@@ -22,8 +22,8 @@ const Promotions = () => {
   return (
     <div className="slider-container">
       <div className="slider">
-        <div className="slide">🚚 Free Shipping Over €100</div>
         <div className="slide">30 days free returns from Germany</div>
+        <div className="slide">🚚 Free Shipping Over €100</div>
         <div className="slide">10% Student Discount</div>
         {/* <div className="slide">Get 2 more items for order over  €150</div> */}
       </div>
