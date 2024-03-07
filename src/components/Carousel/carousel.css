@@ -28,10 +28,10 @@
   
   
   .carousel .rec-item {
-    margin-left: 35px;
-    align-items: stretch;
+    margin-top: 50px;
+    align-items: center;
     justify-content: flex-start;
-    font-size: 15px; /* Reduce font size for paragraph */
+    font-size: 30px; /* Reduce font size for paragraph */
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 900;
     color: white;
