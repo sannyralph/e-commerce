@@ -14,7 +14,7 @@ const Help = () => {
         <div className="Help">
            <div className="Help-item">
             <QuestionMarkIcon className="Help-icon"/>
-            <h6>Need Help</h6>
+            <h6>FAQ</h6>
             <p>The most frequently asked questions are answered in our Help Center.</p>
             <Button variant="contained" disableElevation className="button">Help Center</Button>
           </div>

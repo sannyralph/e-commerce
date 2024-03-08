@@ -22,6 +22,7 @@
     border-right: 1px  rgb(255, 255, 255);
     box-sizing: border-box;
     width: 70px;
+    margin-right: 35px;
 }
 
 .cat-text:hover {

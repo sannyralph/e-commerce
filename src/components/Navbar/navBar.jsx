@@ -63,10 +63,10 @@ const NavBarz = () => {
             navbarScroll
           >
             <Nav.Link id="navbtn" className="cat-text" href="#action1">
-              Ladies
+              Sportswear
             </Nav.Link>
             <Nav.Link id="navbtn" className="cat-text" href="#action2">
-              Men's
+              Accessories
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
