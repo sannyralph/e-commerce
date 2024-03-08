@@ -21,7 +21,7 @@ const ProductCard = ({ item }) => {
 
     <div>
        <div>
-          <h1 className="ProductCard-header">Latest Realease</h1>
+          <h1 className="ProductCard-header">Latest Release</h1>
         </div>
       <div className="productCard-container">
       <div className="product-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

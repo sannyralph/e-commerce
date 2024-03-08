@@ -7,6 +7,37 @@
     height: 400px;
 }
 
+.addPage-background  {
+  background-size: cover; /* Cover the entire container with the background image */
+  background-position: center; /* Center the background image horizontally and vertically */
+  /* Add any other styles you need for the carousel container */
+  height: 400px;
+}
+.addPage-button {
+  background-color: rgb(255, 255, 255) !important;
+  color: rgb(0, 0, 0) !important;
+  justify-content: center;
+  width: 200px;
+  border-radius: 20px !important; 
+  font-size: 15px !important; 
+  font-family: Helvetica, Arial, sans-serif !important; 
+  font-weight: 900 !important;
+}
+
+.addPage-button:hover {
+  background-color: #b0b3b6 !important;
+}
+
+.addPage-item p {
+  margin-top: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 30px; /* Reduce font size for paragraph */
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  color: white;
+}
+
 .button {
     background-color: white !important;
     color: black !important;
