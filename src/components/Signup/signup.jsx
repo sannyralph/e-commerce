@@ -13,6 +13,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import loginImg from "./../../assets/images/loginImg.webp"
+import logo from "./../../assets/images/unnamed.png"
+import "./signup.css"
 
 const defaultTheme = createTheme();
 
@@ -36,7 +38,7 @@ const SignInSide = () => {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: ` url(${loginImg})` ,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${loginImg})` ,
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -44,7 +46,7 @@ const SignInSide = () => {
             backgroundPosition: 'fit',
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} className="signIn-side" square>
           <Box
             sx={{
               my: 8,
@@ -53,14 +55,17 @@ const SignInSide = () => {
               flexDirection: 'column',
               alignItems: 'center',
             }}
-          >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-              <LockOutlinedIcon />
-            </Avatar>
+          > 
+            <div style={{ maxHeight: "100px" }}>
+            <img src={logo} alt={"logo"}   className="sportonLogo" />
+            </div>
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+              <Typography className='signIn-text'>
+                Email Address
+              </Typography>
               <TextField
                 margin="normal"
                 required
@@ -70,7 +75,11 @@ const SignInSide = () => {
                 name="email"
                 autoComplete="email"
                 autoFocus
+                className='signIn-textField'
               />
+              <Typography  className='signIn-text'>
+                Password
+              </Typography>
               <TextField
                 margin="normal"
                 required
@@ -80,30 +89,32 @@ const SignInSide = () => {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                className='signIn-textField'
               />
-              <FormControlLabel
+              {/* <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
-              />
+              /> */}
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                className="signIn-Button"
               >
                 Sign In
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link href="#" variant="body2">
+                  <Link href="#" variant="body2" className='passReset'>
                     Forgot password?
                   </Link>
                 </Grid>
-                <Grid item>
+                {/* <Grid item>
                   <Link href="#" variant="body2">
                     {"Don't have an account? Sign Up"}
                   </Link>
-                </Grid>
+                </Grid> */}
               </Grid>
               {/* <Copyright sx={{ mt: 5 }} /> */}
             </Box>
