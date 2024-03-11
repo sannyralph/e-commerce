@@ -6,6 +6,10 @@ import Promotions from "./components/Navbar/freeShiping"
 import SignInSide from "./components/Signup/signup"
 import CartPage from "./components/Cart/cart"
 import Hero from "./components/Hero/hero"
+import ProductCard from "./components/Cards/cards"
+import Slider from "./components/Carousel/carousel"
+import AddPage from "./components/Carousel/addPage"
+import ProductPage from "./components/ProductPage/producttPage"
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 
 
@@ -22,6 +26,10 @@ function App() {
             <Route path='/' element={<Hero/>}/>
             <Route path="/SignInSide" element={<SignInSide/>} /> 
             <Route path="/cart" element={<CartPage/>} /> 
+            <Route path="/ProductCard" element={<ProductCard/>} />
+            <Route path="/slider" element={<Slider/>} />
+            <Route path="/AddPage" element={<AddPage/>} />
+            <Route path="/ProductPage" element={<ProductPage/>} />
           </Routes>
           <Footer/>
          </BrowserRouter>

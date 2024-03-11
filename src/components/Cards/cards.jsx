@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./Cards.css";
-import imgTest1 from "./../../assets/images/test1.webp";
+// import imgTest1 from "./../../assets/images/test1.webp";
 import imgTest2 from "./../../assets/images/test2.webp";
 import imgTest3 from "./../../assets/images/test3.webp";
-import imgTest4 from "./../../assets/images/test4.webp";
+// import imgTest4 from "./../../assets/images/test4.webp";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import {Link} from 'react-router-dom'
 
 const ProductCard = ({ item }) => {
   const [hovered, setHovered] = useState(false);
@@ -24,6 +25,7 @@ const ProductCard = ({ item }) => {
           <h1 className="ProductCard-header">Latest Release</h1>
         </div>
       <div className="productCard-container">
+      <Link to="/ProductPage">
       <div className="product-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="product-image-container">
         <img
@@ -32,7 +34,7 @@ const ProductCard = ({ item }) => {
           className="product-image"
         />
         {hovered && (
-          <img src={imgTest2} alt="Alternate Image" className="hover-image" />
+          <img src={imgTest2} alt="modelpost" className="hover-image" />
         )}
         <div className="heart-icon"><FavoriteBorderIcon /></div>
         {hovered && (
@@ -57,6 +59,8 @@ const ProductCard = ({ item }) => {
         {/* Additional information here */}
       </div>
     </div>
+      </Link>
+      
     <div className="product-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="product-image-container">
         <img
@@ -65,7 +69,7 @@ const ProductCard = ({ item }) => {
           className="product-image"
         />
         {hovered && (
-          <img src={imgTest3} alt="Alternate Image" className="hover-image" />
+          <img src={imgTest3} alt="modelpost" className="hover-image" />
         )}
         <div className="heart-icon"><FavoriteBorderIcon /></div>
         {hovered && (
@@ -131,7 +135,7 @@ const ProductCard = ({ item }) => {
           className="product-image"
         />
         {hovered && (
-          <img src={imgTest3} alt="Alternate Image" className="hover-image" />
+          <img src={imgTest3} alt="modelpost" className="hover-image" />
         )}
         <div className="heart-icon"><FavoriteBorderIcon /></div>
         {hovered && (

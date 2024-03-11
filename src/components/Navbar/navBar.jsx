@@ -110,6 +110,7 @@ const NavBarz = () => {
           {" "}
           <ShoppingBagIcon />{" "}
         </Button> 
+        <div pill color="denger">{2}</div>
        </Link>
       </Container>
     </Navbar>
