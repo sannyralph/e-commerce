@@ -34,6 +34,7 @@ const ProductPage = () => {
                     </div>
                 </div>
                 <button>ADD TO CART</button>
+                <p className="productDisplay-category"><span>Category</span> <span>women</span></p>
             </div>
         </div>
     );
