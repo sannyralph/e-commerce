@@ -7,10 +7,10 @@ const ProductPage = () => {
         <div className="productDisplay">
             <div className="productDisplay-left">
                 <div className="productDisplay-img-list">
-                    <img src={img1} alt="product-img" /> 
-                    <img src={img1} alt="product-img" /> 
-                    <img src={img1} alt="product-img" /> 
-                    <img src={img1} alt="product-img" /> 
+                    <img  className="img" src={img1} alt="product-img" /> 
+                    <img className="img" src={img1} alt="product-img" /> 
+                    <img className="img" src={img1} alt="product-img" /> 
+                    <img className="img" src={img1} alt="product-img" /> 
                 </div>
                 <div className="productDisplay-img">
                     <img src={img1} alt="product-img" className="productDisplay-img-main" /> 
@@ -24,16 +24,18 @@ const ProductPage = () => {
                 </div>
                 <div className="productDisplay-despcription">VITAL SEAMLESS 2.0 LONG SLEEVE CROP TOP</div>
                 <div className="productDisplay-size">
-                    <h1>Select Size</h1>
+                    <h1 className="size-header">Select Size:</h1>
                     <div className="size-select">
-                        <div>XS</div>
-                        <div>S</div>
-                        <div>M</div>
-                        <div>L</div>
-                        <div>XL</div>
+                        <div className="sizes">XXS</div>
+                        <div className="sizes">XS</div>
+                        <div className="sizes">S</div>
+                        <div className="sizes">M</div>
+                        <div className="sizes">L</div>
+                        <div className="sizes">XL</div>
+                        <div className="sizes">XL</div>
                     </div>
                 </div>
-                <button>ADD TO CART</button>
+                <button className="button">ADD TO CART</button>
                 <p className="productDisplay-category"><span>Category</span> <span>women</span></p>
             </div>
         </div>
