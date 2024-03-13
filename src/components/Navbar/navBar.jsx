@@ -10,6 +10,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { TextField, InputAdornment} from "@mui/material";
 import { useState, useEffect, Fragment} from "react";
 import {getItemData} from "../../api"
+import CartPage from "./../Cart/cart"
 // import SignInSide from "./../Signup/signup"
 import ProductList from "./../ProductList/productList"
 
@@ -19,6 +20,11 @@ const NavBarz = () => {
   const [anchor, setAnchor] = useState(null);
   const [search, setSearch] = useState("");
   const [items, setItems] = useState([]);
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const toggleCart = () => {
+    setCartOpen(!cartOpen);
+  };
 
   const fetchItemData = async () => {
     if(!search) {
@@ -105,14 +111,15 @@ const NavBarz = () => {
             <FavoriteIcon />{" "}
         </Button>
        </Link>
-       <Link to="/cart">
+       <Link to="/cart" onClick={toggleCart}>
        <Button variant="outline" style={{ color: "white" }}>
           {" "}
           <ShoppingBagIcon />{" "}
         </Button> 
-        <div pill color="denger">{2}</div>
+        {/* <div pill color="denger">{2}</div> */}
        </Link>
       </Container>
+      <CartPage isOpen={cartOpen} toggleCart={toggleCart} />
     </Navbar>
       {/* <ProductList items={items}/>   */}
   </Fragment>
