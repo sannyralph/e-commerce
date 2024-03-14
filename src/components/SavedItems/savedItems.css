@@ -1,0 +1,12 @@
+
+.savedItems-poster {
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.savedItems-poster h1 {
+    display: flex;
+    padding: 10%;
+    color: white;
+}

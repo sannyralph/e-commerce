@@ -105,13 +105,13 @@ const NavBarz = () => {
           </Button>
         </Link>
        
-       <Link to="/SavedItems">
+       <Link to="/SavedItem">
         <Button variant="outline" style={{ color: "white" }}>
             {" "}
             <FavoriteIcon />{" "}
         </Button>
        </Link>
-       <Link to="/cart" onClick={toggleCart}>
+       <Link to="/Cart" onClick={toggleCart}>
        <Button variant="outline" style={{ color: "white" }}>
           {" "}
           <ShoppingBagIcon />{" "}
