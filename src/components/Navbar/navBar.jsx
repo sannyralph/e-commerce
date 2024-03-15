@@ -82,7 +82,7 @@ const NavBarz = () => {
             value={search}
             onChange={(event) => setSearch(event.target.value)}
             className="Textfield"
-            placeholder="Search for items and brands"
+            placeholder="Search for item"
             InputProps={{
               startAdornment: (
                 <InputAdornment position="start">
