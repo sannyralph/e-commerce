@@ -2,8 +2,16 @@ import React from "react";
 import "./productPage.css"
 import img1 from "./../../assets/images/test1.webp"
 import ProductCard from "./../Cards/cards"
+import {useContext} from "react"
+import SettingsProvider from "./../../context/settings"
 
 const ProductPage = () => {
+    const {product, setProduct, count, setCount, cart, setCart} = useContext(SettingsProvider)
+
+        const  addToCart = () => {
+            setCount(count + 1)
+            setCart([...cart, product])
+        }
     return (
         <>
          <div className="productDisplay">
@@ -48,7 +56,7 @@ const ProductPage = () => {
                         <div className="sizes">XL</div>
                     </div>
                 </div>
-                <button className="addToCartbutton">ADD TO CART</button>
+                <button onClick={addToCart} className="addToCartbutton">ADD TO CART</button>
                 <p className="productDisplay-category"><span>Category</span> <span>women</span></p>
             </div>
         </div>

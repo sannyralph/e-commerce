@@ -15,5 +15,5 @@ export const SettingsProvider = ({children}) => {
         </SettingsContext.Provider>
 } 
 
-export default SettingsProvider
+export default SettingsContext
 

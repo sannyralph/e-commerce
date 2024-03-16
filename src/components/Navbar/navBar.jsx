@@ -13,6 +13,8 @@ import {getItemData} from "../../api"
 import CartPage from "./../Cart/cart"
 // import SignInSide from "./../Signup/signup"
 import ProductList from "./../ProductList/productList"
+import { useContext } from "react";
+import SettingsProvider from "../../context/settings";
 
 
 
@@ -52,6 +54,7 @@ const NavBarz = () => {
     setAnchor(null);
   };
 
+  const {count} = useContext(SettingsProvider)
   return (
     <Fragment>
     <Navbar expand="lg" className="navBar">
@@ -116,7 +119,9 @@ const NavBarz = () => {
           {" "}
           <ShoppingBagIcon />{" "}
         </Button> 
-        {/* <div pill color="denger">{2}</div> */}
+        <div className="cartCount">
+          {count}
+        </div>
        </Link>
       </Container>
       <CartPage isOpen={cartOpen} toggleCart={toggleCart} />

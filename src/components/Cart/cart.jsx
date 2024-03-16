@@ -7,6 +7,9 @@ import img07 from "./../../assets/images/test2.webp";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever'; 
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import {useContext} from "react"
+import SettingsProvider from "./../../context/settings"
+import index from "react-typical";
 
 const CartPage = ({ isOpen, toggleCart }) => {
   const [quantity, setQuantity] = useState(1);
@@ -21,6 +24,14 @@ const CartPage = ({ isOpen, toggleCart }) => {
     }
   };
 
+  const {cart, setCart, count, setCount} = useContext(SettingsProvider)
+
+  const deleteFromCart = (i) => {
+     const newCartList = cart.filter((x, index) => index !== i )
+     setCart([...newCartList])
+     setCount(count - 1)
+  }
+
   return (
     <div className={`cart ${isOpen ? "open" : ""}`}>
       <div className="cart-header">
@@ -31,93 +42,50 @@ const CartPage = ({ isOpen, toggleCart }) => {
       <div className="cart-content">
         <h2>My Cart</h2>
         <hr />
-        <div>
-          <div className="cart-item">
-            <div className="cart-image">
-              <img src={img09} alt="test pix" />
-            </div>
-            <div className="cart-info">
-              <h1>Sport Bra</h1>
-              <h1>$15</h1>
-              <p>Black</p>
-              <p>XXL</p>
-              <div className="quantity-controls">
-                <button onClick={handleDecrease}>
-                  <RemoveIcon />
-                </button>
-                <input type="text" value={quantity} readOnly />
-                <button onClick={handleIncrease}>
-                  <AddIcon />
-                </button>
-                <button className="cart-delete">
-                    <DeleteForeverIcon />
-                </button>
+          {
+            cart?.length === 0? 
+            <div>
+              Cart is currently empty
+            </div> : cart?.map((_, i) => 
+                 <div key={i}>
+                 <div className="cart-item">
+                   <div className="cart-image">
+                     <img src={img09} alt="test pix" />
+                   </div>
+                   <div className="cart-info">
+                     <h1>Sport Bra</h1>
+                     <h1>$15</h1>
+                     <p>Black</p>
+                     <p>XXL</p>
+                     <div className="quantity-controls">
+                       <button onClick={handleDecrease}>
+                         <RemoveIcon />
+                       </button>
+                       <input type="text" value={quantity} readOnly />
+                       <button onClick={handleIncrease}>
+                         <AddIcon />
+                       </button>
+                       <button className="cart-delete" onClick={() => deleteFromCart(i)}>
+                           <DeleteForeverIcon />
+                       </button>
+                     </div>
+                   </div>
+                   
+                 </div>
+               </div>
+            )
+          }
+          <hr/>
+          {
+            cart?.length > 0 && 
+            <div>
+              <div className="cart-total">
+                Total: $30
               </div>
+              <button className="checkout-button">Checkout</button>
             </div>
-            
-          </div>
-        </div>
-        <hr />
-        <div>
-          <div className="cart-item">
-            <div className="cart-image">
-              <img src={img08} alt="test pix" />
-            </div>
-            <div className="cart-info">
-              <h1>Sport Bra</h1>
-              <h1>$15</h1>
-              <p>Black</p>
-              <p>XXL</p>
-              <div className="quantity-controls">
-                <button onClick={handleDecrease}>
-                  <RemoveIcon />
-                </button>
-                <input type="text" value={quantity} readOnly />
-                <button onClick={handleIncrease}>
-                  <AddIcon />
-                </button>
-                <button className="cart-delete">
-                    <DeleteForeverIcon />
-                </button>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        <hr />
-        <div>
-          <div className="cart-item">
-            <div className="cart-image">
-              <img src={img07} alt="test pix" />
-            </div>
-            <div className="cart-info">
-              <h1>Sport Bra</h1>
-              <h1>$15</h1>
-              <p>Black</p>
-              <p>XXL</p>
-              <div className="quantity-controls">
-                <div className="plus&minus">
-                <button onClick={handleDecrease}>
-                  <RemoveIcon />
-                </button>
-                <input type="text" value={quantity} readOnly />
-                <button onClick={handleIncrease}>
-                  <AddIcon />
-                </button>
-                </div>
-                <button className="cart-delete">
-                    <DeleteForeverIcon />
-                </button>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-        <hr />
-        <div className="cart-total">
-          Total: $30
-        </div>
-        <button className="checkout-button">Checkout</button>
+          }
+        
       </div>
     </div>
   );

@@ -71,3 +71,14 @@
       transform: translateX(0);
     }
   }
+
+  .cartCount {
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
