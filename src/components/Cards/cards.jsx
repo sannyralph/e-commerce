@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Cards.css";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { useContext } from "react";
 import SettingsContext from "./../../context/settings"
 
@@ -19,6 +19,11 @@ const ProductCard = ({items}) => {
     setHovered(false);
   };
 
+  const truncate = (str, n) => {
+      return String(str).length > n ? String(str).substring(0, n-1)
+      + "..." : str
+  }
+
   return (
 
     <div>
@@ -35,7 +40,8 @@ const ProductCard = ({items}) => {
              }
              return false
           })?.map((x, i) => (
-            <div key={i} className="product-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <Link to={`/ProductPage/${x?.id}`}>
+              <div key={i} className="product-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className="product-image-container">
               <img
                 src={x?.itemPhoto1.url}
@@ -62,12 +68,13 @@ const ProductCard = ({items}) => {
               )}
             </div>
             <div className="product-details">
-              <h2 className="product-name">{x?.itemDetails}</h2>
-              <p className="product-color">Black</p>
+              <h2 className="product-name">{truncate(x?.itemDetails, 25)}</h2>
+              <p className="product-color">{x?.color}</p>
               <p className="product-price">€{x?.price}</p>
-              {/* Additional information here */}
             </div>
           </div>
+            </Link>
+            
           ))
         }
       </div>

@@ -22,6 +22,7 @@ const Hero = () => {
               price
               quantity
               size
+              color
               itemPhoto1 {
                 url
               }

@@ -24,11 +24,24 @@ const CartPage = ({ isOpen, toggleCart }) => {
 
   const {cart, setCart, count, setCount} = useContext(SettingsProvider)
 
+  let aggregate = cart?.reduce((previousVal, currentItem) => {
+    if (typeof currentItem.price === 'number' && !isNaN(currentItem.price)) {
+      return previousVal + currentItem.price;
+    }
+    
+    return previousVal;
+  }, 0);
+
   const deleteFromCart = (i) => {
      const newCartList = cart.filter((x, index) => index !== i )
      setCart([...newCartList])
      setCount(count - 1)
   }
+
+  const formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "EUR",
+  });
 
   return (
     <div className={`cart ${isOpen ? "open" : ""}`}>
@@ -46,15 +59,15 @@ const CartPage = ({ isOpen, toggleCart }) => {
               Cart is currently empty
             </div> : cart?.map((_, i) => 
                  <div key={i}>
-                 <div className="cart-item">
+                 <div className="cart-item" to = {`/ProductPage/${_?.id}`}>
                    <div className="cart-image">
-                     <img src={img09} alt="test pix" />
+                     <img src={_?.itemPhoto1?.url} alt="test pix" />
                    </div>
                    <div className="cart-info">
-                     <h1>Sport Bra</h1>
-                     <h1>$15</h1>
-                     <p>Black</p>
-                     <p>XXL</p>
+                     <h1>{_?.itemName}</h1>
+                     <h1>€{_?.price}</h1>
+                     <p>{_?.color}</p>
+                     <p>{_?.size}</p>
                      <div className="quantity-controls">
                        <button onClick={handleDecrease}>
                          <RemoveIcon />
@@ -78,7 +91,7 @@ const CartPage = ({ isOpen, toggleCart }) => {
             cart?.length > 0 && 
             <div>
               <div className="cart-total">
-                Total: $30
+                {formatter.format(aggregate)}
               </div>
               <button className="checkout-button">Checkout</button>
             </div>
