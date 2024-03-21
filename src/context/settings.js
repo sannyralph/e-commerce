@@ -12,7 +12,7 @@ export const SettingsProvider = ({children}) => {
         
         return <SettingsContext.Provider value={values}>
                 {children}
-        </SettingsContext.Provider>
+               </SettingsContext.Provider>
 } 
 
 export default SettingsContext

@@ -15,9 +15,9 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom';
 
 
 
+
 function App() {
 
-  
   return (
     <div className="App">
        <di>
@@ -29,7 +29,7 @@ function App() {
             <Route path="/SignInSide" element={<SignInSide/>} />
             <Route path="SavedItem" element={<SavedItem/>} /> 
             <Route path="/cart" element={<CartPage/>} /> 
-            <Route path="/ProductCard" element={<ProductCard/>} />
+            <Route path="/ProductCard" element={<ProductCard />} />
             <Route path="/slider" element={<Slider/>} />
             <Route path="/AddPage" element={<AddPage/>} />
             <Route path="/ProductPage" element={<ProductPage/>} />

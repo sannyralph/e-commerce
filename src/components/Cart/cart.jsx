@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import "./cart.css"; // Import your cart styles here
 import CloseIcon from '@mui/icons-material/Close';
 import img09 from "./../../assets/images/test4.webp";
-import img08 from "./../../assets/images/test3.webp";
-import img07 from "./../../assets/images/test2.webp";
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever'; 
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import {useContext} from "react"
 import SettingsProvider from "./../../context/settings"
-import index from "react-typical";
+
 
 const CartPage = ({ isOpen, toggleCart }) => {
   const [quantity, setQuantity] = useState(1);
