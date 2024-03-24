@@ -43,6 +43,8 @@ const CartPage = ({ isOpen, toggleCart }) => {
     currency: "EUR",
   });
 
+ 
+
   return (
     <div className={`cart ${isOpen ? "open" : ""}`}>
       <div className="cart-header">

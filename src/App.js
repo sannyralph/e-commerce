@@ -12,6 +12,9 @@ import CartPage from './components/Cart/cart';
 import SavedItem from './components/SavedItems/savedItem';
 import ProductPage from "./components/ProductPage/producttPage"
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import Checkout from './components/Checkout/checkout';
+
+// import PaymentSuccess from './components/Success/PaymentSuccess';
 
 
 
@@ -33,6 +36,7 @@ function App() {
             <Route path="/slider" element={<Slider/>} />
             <Route path="/AddPage" element={<AddPage/>} />
             <Route path="/ProductPage/:id" element={<ProductPage/>} />
+            <Route path="/checkout/:id" element={<Checkout/>} />
           </Routes>
           <Footer/>
          </BrowserRouter>

@@ -16,6 +16,8 @@
     "@mui/joy": "^5.0.0-beta.27",
     "@mui/material": "^5.15.9",
     "@mui/styles": "^5.15.12",
+    "@stripe/react-stripe-js": "^2.6.2",
+    "@stripe/stripe-js": "^3.0.10",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

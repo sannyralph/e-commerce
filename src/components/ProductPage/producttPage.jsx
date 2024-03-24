@@ -4,18 +4,29 @@ import img1 from "./../../assets/images/test1.webp"
 import ProductCard from "./../Cards/cards"
 import {useContext} from "react"
 import SettingsProvider from "./../../context/settings"
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
 
 const ProductPage = () => {
     const {product, setProduct, count, setCount, cart, setCart} = useContext(SettingsProvider);
     const {id} = useParams()
+    const navigate = useNavigate()
+
 
         const  addToCart = () => {
             setCount(count + 1)
             setCart([...cart, product])
         }
+
+        const handleCheckout = async () => {
+          await axios.get(`http://localhost:8080/secret/${product?.price}`)
+          .then((res) => {
+              navigate(`/checkout/${res.data.client_secret}`)
+            }
+          )
+      }
+    
 
         useEffect(() => {
             const fetchProductDetails = async () => {
@@ -104,6 +115,7 @@ const ProductPage = () => {
                     </div>
                 </div>
                 <button onClick={addToCart} className="addToCartbutton">ADD TO CART</button>
+                <button onClick={handleCheckout} className="addToCartbutton">BUY NOW</button>
                 <p className="productDisplay-category"><span>Category</span> <span>women</span></p>
             </div>
         </div>
