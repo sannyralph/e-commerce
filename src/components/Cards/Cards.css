@@ -135,3 +135,12 @@
   font-size: x-large;
   font-weight: 900;
 }
+
+.itemLink {
+  text-decoration: none; 
+  color: black;
+}
+
+.itemLink:hover {
+  color: black;
+}

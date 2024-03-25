@@ -40,7 +40,7 @@ const ProductCard = ({items}) => {
              }
              return false
           })?.map((x, i) => (
-            <Link to={`/ProductPage/${x?.id}`}>
+            <Link className="itemLink" to={`/ProductPage/${x?.id}`}>
               <div key={i} className="product-card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className="product-image-container">
               <img
